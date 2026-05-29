@@ -1,46 +1,39 @@
 package com.example.demo.models;
 
-// Modelo de Favorito - relaciona usuarios con libros que marcan como favoritos
+import java.util.Date;
+
+// Modelo de Favorito - relaciona cuentos con favoritos del usuario
 public class Favorito {
 
-    private int idFavorito;
-    private int idUsuario;
-    private int idLibro;
-    private String fecha;
+    private int favoId;             // FAVO_ID
+    private Date favoFechaGuardado; // FAVO_FECHA_GUARDADO
+    private int cuentoId;           // FK - CUENTO
 
     // Constructor por defecto
     public Favorito() {
     }
 
-    public int getIdFavorito() {
-        return idFavorito;
+    public int getFavoId() {
+        return favoId;
     }
 
-    public void setIdFavorito(int idFavorito) {
-        this.idFavorito = idFavorito;
+    public void setFavoId(int favoId) {
+        this.favoId = favoId;
     }
 
-    public int getIdUsuario() {
-        return idUsuario;
+    public Date getFavoFechaGuardado() {
+        return favoFechaGuardado;
     }
 
-    public void setIdUsuario(int idUsuario) {
-        this.idUsuario = idUsuario;
+    public void setFavoFechaGuardado(Date favoFechaGuardado) {
+        this.favoFechaGuardado = favoFechaGuardado;
     }
 
-    public int getIdLibro() {
-        return idLibro;
+    public int getCuentoId() {
+        return cuentoId;
     }
 
-    public void setIdLibro(int idLibro) {
-        this.idLibro = idLibro;
-    }
-
-    public String getFecha() {
-        return fecha;
-    }
-
-    public void setFecha(String fecha) {
-        this.fecha = fecha;
+    public void setCuentoId(int cuentoId) {
+        this.cuentoId = cuentoId;
     }
 }

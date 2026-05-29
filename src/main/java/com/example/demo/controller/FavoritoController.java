@@ -22,7 +22,7 @@ public class FavoritoController {
     @GetMapping("/favorito/{id}")
     public Favorito buscar(@PathVariable int id) {
         for (Favorito f : listaFavorito) {
-            if (f.getIdFavorito() == id) {
+            if (f.getFavoId() == id) {
                 return f;
             }
         }
@@ -40,7 +40,7 @@ public class FavoritoController {
     @DeleteMapping("/favorito/{id}")
     public String eliminar(@PathVariable int id) {
         for (int i = 0; i < listaFavorito.size(); i++) {
-            if (listaFavorito.get(i).getIdFavorito() == id) {
+            if (listaFavorito.get(i).getFavoId() == id) {
                 listaFavorito.remove(i);
                 return "Favorito eliminado";
             }
@@ -48,12 +48,12 @@ public class FavoritoController {
         return "Favorito no encontrado";
     }
 
-    // GET: Filtrar favoritos por idUsuario usando for
+    // GET: Filtrar favoritos por cuentoId usando for
     @GetMapping("/filtrarFavorito")
-    public List<Favorito> filtrar(@RequestParam(required = false) Integer idUsuario) {
+    public List<Favorito> filtrar(@RequestParam(required = false) Integer cuentoId) {
         List<Favorito> resultado = new ArrayList<>();
         for (Favorito f : listaFavorito) {
-            if (idUsuario != null && f.getIdUsuario() == idUsuario) {
+            if (cuentoId != null && f.getCuentoId() == cuentoId) {
                 resultado.add(f);
             }
         }

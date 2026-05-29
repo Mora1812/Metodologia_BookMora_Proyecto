@@ -3,7 +3,7 @@
 Proyecto Spring Boot sencillo para gestionar 4 modelos de un proyecto de biblioteca:
 - `Autor`
 - `Categoria`
-- `Cuenta`
+- `Cuento`
 - `Favorito`
 
 ## Estructura del proyecto

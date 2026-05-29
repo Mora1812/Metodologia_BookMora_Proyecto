@@ -5,9 +5,7 @@ public class Autor {
 
     private int idAutor;
     private String nombre;
-    private String apellido;
     private String email;
-    private String pais;
 
     // Constructor por defecto
     public Autor() {
@@ -29,14 +27,6 @@ public class Autor {
         this.nombre = nombre;
     }
 
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
     public String getEmail() {
         return email;
     }
@@ -45,11 +35,4 @@ public class Autor {
         this.email = email;
     }
 
-    public String getPais() {
-        return pais;
-    }
-
-    public void setPais(String pais) {
-        this.pais = pais;
-    }
 }
