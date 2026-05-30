@@ -77,3 +77,4 @@ curl "http://localhost:8080/filtrarAutor?nombre=Gabriel"
 
 - No usa base de datos; la información se guarda solo en listas de memoria.
 - El código está hecho para que puedas explicarlo fácilmente: cada método hace una sola cosa.
+ 
